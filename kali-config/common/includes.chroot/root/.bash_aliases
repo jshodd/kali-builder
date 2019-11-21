@@ -1,0 +1,8 @@
+alias autorecon="python3 /opt/autorecon-git/autorecon.py"
+alias smbver="/opt/smbver/smbver.sh"
+alias vmshare="cd /mnt/hgfs/VM_SHARE"
+alias pyhttp="python2 -m SimpleHTTPServer"
+alias pyftp="python2 -m pyftpdlib -p21 -w"
+alias vmware-setup="/opt/vmware_scripts/mount-shared-folders.sh && /opt/vmware_scripts/restart-vmware-tools.sh"
+alias tapip="ifconfig tap0 | sed -n '2 p' | awk '{print \$2}'"
+alias tunip="ifconfig tun0 | sed -n '2 p' | awk '{print \$2}'"
