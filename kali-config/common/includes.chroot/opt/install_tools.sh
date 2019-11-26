@@ -60,6 +60,9 @@ git clone -q -b master https://github.com/rasta-mouse/Sherlock.git /opt/sherlock
 echo 'Install Watson'
 git clone -q -b master https://github.com/rasta-mouse/Watson.git /opt/watson-git/
 
+echo 'Install pth-toolkit'
+git clone -q -b master https://github.com/byt3bl33d3r/pth-toolkit.git /opt/pth-toolkit-git/
+
 echo 'Install AutoRecon'
 git clone -q -b master https://github.com/Tib3rius/AutoRecon.git /opt/autorecon-git/
 pip3 install -r /opt/autorecon-git/requirements.txt
