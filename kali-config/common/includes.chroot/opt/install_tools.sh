@@ -22,9 +22,9 @@ echo 'install dnsftp'
 git clone -q -b master https://github.com/breenmachine/dnsftp.git /opt/dnsftp-git/
 
 echo 'Download AccessChk'
-timeout 300 curl --progress -k -L -f "https://web.archive.org/web/20080530012252/http://live.sysinternals.com/accesschk.exe" > /usr/share/windows-binaries/accesschk_v5.02.exe || echo 'Issue downloading accesschk_v5' 1>&2
+timeout 300 curl -k -L -f "https://web.archive.org/web/20080530012252/http://live.sysinternals.com/accesschk.exe" > /usr/share/windows-binaries/accesschk_v5.02.exe || echo 'Issue downloading accesschk_v5' 1>&2
 
-timeout 300 curl --progress -k -L -f "https://download.sysinternals.com/files/AccessChk.zip" > /usr/share/windows-binaries/AccessChk.zip || echo 'Issue downloading accesschk.zip' 1>&2
+timeout 300 curl -k -L -f "https://download.sysinternals.com/files/AccessChk.zip" > /usr/share/windows-binaries/AccessChk.zip || echo 'Issue downloading accesschk.zip' 1>&2
 
 echo 'link seclists to others'
 [[ -d /usr/share/wordlists/seclists ]] || ln -sf /usr/share/seclists /usr/share/wordlists/seclists
@@ -32,6 +32,7 @@ echo 'link seclists to others'
 echo 'extracting rockyou'
 [ -e /usr/share/wordlists/rockyou.txt.gz ]\
 	  && gzip -dc < /usr/share/wordlists/rockyou.txt.gz > /usr/share/wordlists/rockyou.txt
+
 echo 'linking dirbuster wordlists to others'
 [ -e /usr/share/dirbuster/wordlists ] \
 	  && ln -sf /usr/share/dirbuster/wordlists /usr/share/wordlists/dirbuster
@@ -69,6 +70,10 @@ pip3 install -r /opt/autorecon-git/requirements.txt
 
 echo 'Install Pspy'
 git clone -q -b master https://github.com/DominicBreuker/pspy.git /opt/pspy-git/
+
+echo 'Install PEAS'
+git clone -q -b master https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite /opt/peass-git 
+wget https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS/winPEASexe/winPEAS/bin -O /opt/peass-git/winPEAS/winPEASexe/winPEAS.exe
 
 echo 'Install Spacemacs'
 git clone --single-branch --branch develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
