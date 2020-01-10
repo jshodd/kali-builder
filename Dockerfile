@@ -12,5 +12,4 @@ RUN ln -s /usr/share/debootstrap/scripts/kali /usr/share/debootstrap/scripts/kal
 
 WORKDIR /root/kali-builder/
 ADD . / /root/kali-builder/
-VOLUME /root/results/
-CMD ["./lb.sh" , "--verbose" , "-a", "amd64" , "&&", "mv" , "images/*.iso" , "/root/results/"]
+CMD ["tail", "-f", "/dev/null"]

@@ -39,11 +39,12 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      python
+     asm
      yaml
      terraform
      docker
      go
-	 dash
+     dash
      rcirc
      helm
      auto-completion
