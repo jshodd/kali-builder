@@ -338,7 +338,7 @@ you should place your code here."
   (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
   (setq exec-path (append exec-path '("/Library/TeX/texbin")))
   (add-to-list 'auto-mode-alist '("\\.tf$ . terraform-mode"))
-
+  (setq x86-lookup-pdf "/usr/share/PDFs/x86.pdf") 
   (spacemacs/set-leader-keys "oc" 'org-capture)
   (spacemacs/set-leader-keys "or" 'org-refile)
   (setq org-latex-listings 'minted

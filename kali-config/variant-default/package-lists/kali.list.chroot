@@ -74,6 +74,7 @@ p7zip-rar
 openvpn
 wine
 rdesktop
+poppler-utils
 
 #printers
 system-config-printer

@@ -95,3 +95,9 @@ pip install pyftpdlib
 
 echo 'Marking smbver script as executable'
 chmod +x /opt/smbver/smbver.sh
+
+echo 'Downloading x86 instruction pdf'
+mkdir -p /usr/share/PDFs
+cd /usr/share/PDFs
+wget https://software.intel.com/sites/default/files/managed/39/c5/325462-sdm-vol-1-2abcd-3abcd.pdf
+mv 325462-sdm-vol-1-2abcd-3abcd.pdf x86.pdf
